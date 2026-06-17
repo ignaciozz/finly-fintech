@@ -1,0 +1,475 @@
+/* ================================================
+   FINLY FINTECH — styles.css
+   Estilos customizados complementares ao Tailwind
+   ================================================ */
+
+/* ── Fontes ── */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ── Base ── */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #EDEDED;
+  color: #2A2A2A;
+}
+
+h1, h2, h3, h4,
+.heading {
+  font-family: 'Montserrat', sans-serif;
+  color: #2A2A2A;
+}
+
+/* ================================================
+   SIDEBAR
+   ================================================ */
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6B7280;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  margin-bottom: 4px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-link:hover {
+  background-color: #F5F5F5;
+  color: #2A2A2A;
+}
+
+.nav-link.active {
+  background-color: #FDEAE5;
+  color: #ED461D;
+  font-weight: 600;
+}
+
+.nav-link.active svg {
+  color: #ED461D;
+}
+
+.nav-link.logout:hover {
+  background-color: #FEF2F2;
+  color: #EF4444;
+}
+
+/* ================================================
+   CARDS GENÉRICOS
+   ================================================ */
+
+.card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid #E5E5E5;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* ================================================
+   GRÁFICO DE BARRAS (CSS puro)
+   ================================================ */
+
+.chart-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+  height: 160px;
+  position: relative;
+}
+
+.chart-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  gap: 6px;
+}
+
+.bar {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-color: #F5C3B8;
+  transition: opacity 0.2s ease;
+  min-width: 20px;
+  cursor: default;
+}
+
+.bar.highlight {
+  background-color: #ED461D;
+  box-shadow: 0 -4px 12px rgba(237, 70, 29, 0.30);
+}
+
+.bar:hover {
+  opacity: 0.75;
+}
+
+.bar-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #9CA3AF;
+  text-align: center;
+  white-space: nowrap;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bar-label.highlight {
+  color: #ED461D;
+  font-weight: 700;
+}
+
+/* ================================================
+   CARD DE TRANSFERÊNCIA RÁPIDA
+   ================================================ */
+
+.transfer-card {
+  background: linear-gradient(140deg, #ED461D 0%, #C83B18 55%, #A83010 100%);
+  border-radius: 20px;
+  padding: 24px;
+  color: #ffffff;
+  box-shadow: 0 12px 32px rgba(237, 70, 29, 0.40);
+}
+
+.contact-bubble {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.20);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-bubble:hover {
+  background-color: rgba(255, 255, 255, 0.30);
+}
+
+.contact-add {
+  border-style: dashed;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.50);
+  font-size: 1.25rem;
+}
+
+.amount-box {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 12px 16px;
+  margin: 16px 0;
+}
+
+.send-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 14px;
+  background-color: #ffffff;
+  color: #ED461D;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.send-btn:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+/* ================================================
+   CARTÃO DE CRÉDITO VISUAL
+   ================================================ */
+
+.credit-card {
+  background: linear-gradient(135deg, #ED461D 0%, #F97340 60%, #F9A825 100%);
+  border-radius: 18px;
+  padding: 20px 22px;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  min-height: 166px;
+  box-shadow: 0 16px 40px rgba(237, 70, 29, 0.40);
+  margin-bottom: 12px;
+}
+
+.credit-card::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.credit-card::after {
+  content: '';
+  position: absolute;
+  bottom: -70px;
+  left: -40px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.card-chip {
+  width: 30px;
+  height: 22px;
+  background: linear-gradient(135deg, #C9A84C, #F0D070);
+  border-radius: 5px;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.card-number {
+  font-family: 'Montserrat', monospace;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ================================================
+   TRANSAÇÕES
+   ================================================ */
+
+.transaction-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 12px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.transaction-row:hover {
+  background-color: #F5F5F5;
+}
+
+.transaction-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.67rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.badge-pending {
+  background-color: #FEF3C7;
+  color: #D97706;
+}
+
+.badge-done {
+  background-color: #D1FAE5;
+  color: #059669;
+}
+
+/* ================================================
+   METAS / PROGRESSO
+   ================================================ */
+
+.goal-bar {
+  height: 6px;
+  border-radius: 999px;
+  background-color: #EDEDED;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.goal-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+/* ================================================
+   MOBILE BOTTOM NAV
+   ================================================ */
+
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border-top: 1px solid #E5E5E5;
+  z-index: 40;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 6px 0 10px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 0;
+  text-decoration: none;
+  color: #9CA3AF;
+  font-size: 0.65rem;
+  font-weight: 500;
+  transition: color 0.15s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.mobile-nav-item.active {
+  color: #ED461D;
+}
+
+.mobile-nav-fab {
+  width: 44px;
+  height: 44px;
+  background-color: #ED461D;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -22px;
+  box-shadow: 0 6px 20px rgba(237, 70, 29, 0.45);
+}
+
+/* ================================================
+   TOPBAR
+   ================================================ */
+
+.topbar-input {
+  width: 100%;
+  padding: 9px 16px 9px 40px;
+  font-size: 0.875rem;
+  background-color: #F5F5F5;
+  border: 1.5px solid #E5E5E5;
+  border-radius: 12px;
+  color: #2A2A2A;
+  outline: none;
+  transition: border-color 0.15s, background-color 0.15s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.topbar-input::placeholder {
+  color: #9CA3AF;
+}
+
+.topbar-input:focus {
+  border-color: #ED461D;
+  background-color: #ffffff;
+}
+
+.icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6B7280;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  position: relative;
+}
+
+.icon-btn:hover {
+  background-color: #EDEDED;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background-color: #ED461D;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ================================================
+   SCROLLBAR
+   ================================================ */
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F5C3B8;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ED461D;
+}
+
+/* ================================================
+   RESPONSIVIDADE
+   ================================================ */
+
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: 72px;
+  }
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 16px;
+  }
+
+  .transfer-card {
+    padding: 18px;
+  }
+}
