@@ -1,12 +1,5 @@
-/* ================================================
-   FINLY FINTECH — styles.css
-   Estilos customizados complementares ao Tailwind
-   ================================================ */
-
-/* ── Fontes ── */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* ── Base ── */
 * {
   box-sizing: border-box;
 }
@@ -17,15 +10,12 @@ body {
   color: #2A2A2A;
 }
 
-h1, h2, h3, h4,
-.heading {
+h1, h2, h3, h4 {
   font-family: 'Montserrat', sans-serif;
   color: #2A2A2A;
 }
 
-/* ================================================
-   SIDEBAR
-   ================================================ */
+/* Sidebar */
 
 .nav-link {
   display: flex;
@@ -62,9 +52,7 @@ h1, h2, h3, h4,
   color: #EF4444;
 }
 
-/* ================================================
-   CARDS GENÉRICOS
-   ================================================ */
+/* Cards */
 
 .card {
   background-color: #ffffff;
@@ -74,9 +62,7 @@ h1, h2, h3, h4,
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
 }
 
-/* ================================================
-   GRÁFICO DE BARRAS (CSS puro)
-   ================================================ */
+/* Gráfico de barras */
 
 .chart-wrapper {
   display: flex;
@@ -84,7 +70,6 @@ h1, h2, h3, h4,
   justify-content: space-between;
   gap: 8px;
   height: 160px;
-  position: relative;
 }
 
 .chart-col {
@@ -101,9 +86,7 @@ h1, h2, h3, h4,
   width: 100%;
   border-radius: 8px 8px 0 0;
   background-color: #F5C3B8;
-  transition: opacity 0.2s ease;
   min-width: 20px;
-  cursor: default;
 }
 
 .bar.highlight {
@@ -111,16 +94,11 @@ h1, h2, h3, h4,
   box-shadow: 0 -4px 12px rgba(237, 70, 29, 0.30);
 }
 
-.bar:hover {
-  opacity: 0.75;
-}
-
 .bar-label {
   font-size: 0.7rem;
   font-weight: 500;
   color: #9CA3AF;
   text-align: center;
-  white-space: nowrap;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -129,9 +107,7 @@ h1, h2, h3, h4,
   font-weight: 700;
 }
 
-/* ================================================
-   CARD DE TRANSFERÊNCIA RÁPIDA
-   ================================================ */
+/* Card transferência rápida */
 
 .transfer-card {
   background: linear-gradient(140deg, #ED461D 0%, #C83B18 55%, #A83010 100%);
@@ -156,7 +132,6 @@ h1, h2, h3, h4,
   cursor: pointer;
   transition: background-color 0.15s;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
 }
 
 .contact-bubble:hover {
@@ -200,9 +175,7 @@ h1, h2, h3, h4,
   transform: translateY(-1px);
 }
 
-/* ================================================
-   CARTÃO DE CRÉDITO VISUAL
-   ================================================ */
+/* Cartão de crédito */
 
 .credit-card {
   background: linear-gradient(135deg, #ED461D 0%, #F97340 60%, #F9A825 100%);
@@ -259,9 +232,7 @@ h1, h2, h3, h4,
   z-index: 1;
 }
 
-/* ================================================
-   TRANSAÇÕES
-   ================================================ */
+/* Transações */
 
 .transaction-row {
   display: flex;
@@ -306,10 +277,6 @@ h1, h2, h3, h4,
   color: #059669;
 }
 
-/* ================================================
-   METAS / PROGRESSO
-   ================================================ */
-
 .goal-bar {
   height: 6px;
   border-radius: 999px;
@@ -323,9 +290,7 @@ h1, h2, h3, h4,
   border-radius: 999px;
 }
 
-/* ================================================
-   MOBILE BOTTOM NAV
-   ================================================ */
+/* Bottom nav mobile */
 
 .mobile-nav {
   position: fixed;
@@ -371,9 +336,7 @@ h1, h2, h3, h4,
   box-shadow: 0 6px 20px rgba(237, 70, 29, 0.45);
 }
 
-/* ================================================
-   TOPBAR
-   ================================================ */
+/* Topbar */
 
 .topbar-input {
   width: 100%;
@@ -433,43 +396,20 @@ h1, h2, h3, h4,
   font-family: 'Montserrat', sans-serif;
 }
 
-/* ================================================
-   SCROLLBAR
-   ================================================ */
+/* Scrollbar */
 
-::-webkit-scrollbar {
-  width: 4px;
-}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #F5C3B8; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #ED461D; }
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #F5C3B8;
-  border-radius: 999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #ED461D;
-}
-
-/* ================================================
-   RESPONSIVIDADE
-   ================================================ */
+/* Responsividade */
 
 @media (max-width: 1023px) {
-  body {
-    padding-bottom: 72px;
-  }
+  body { padding-bottom: 72px; }
 }
 
 @media (max-width: 640px) {
-  .card {
-    padding: 16px;
-  }
-
-  .transfer-card {
-    padding: 18px;
-  }
+  .card { padding: 16px; }
+  .transfer-card { padding: 18px; }
 }
