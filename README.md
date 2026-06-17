@@ -13,20 +13,6 @@ Tela de dashboard de um aplicativo financeiro fictício chamado **Finly**.
 
 ---
 
-## Estrutura de arquivos
-
-```
-finly-fintech/
-├── index.html          (página principal)
-├── style/
-│   └── styles.css      (estilos customizados)
-├── images/
-│   └── dashboard-finly.png
-└── README.md
-```
-
----
-
 ## Tecnologias utilizadas
 
 - **HTML5** — estrutura da página
